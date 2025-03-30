@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sala de Juegos - Casino JD</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="icon" href="../img/favicon.png" type="image/x-icon">
+</head>
+<body>
+    <audio id="background-music" loop autoplay>
+        <source src="../musica-de-fondo.mp3" type="audio/mp3">
+        Tu navegador no soporta el audio.
+    </audio>
+
+    <!-- Cabecera con el logo -->
+    <header class="header">
+        <div class="logo">
+            <p>Casino JD</p>
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="./localizacion.html">Localización</a></li>
+                <li class="dropdown">
+                    <a href="#" id="toggle-submenu">Servicios ▼</a>
+                    <ul class="submenu">
+                        <li><a href="./restaurante.html">Restaurante</a></li>
+                        <li><a href="./sala.html">Sala de Juegos</a></li>
+                        <li><a href="./cajero.html">Cajeros</a></li>
+                    </ul>
+                </li>
+                <li><a href="../pdf/legal.pdf" download="" title="Descargar bases legales del casino">Oferta</a></li>
+                <li><a href="./galeria.html">Galería</a></li>
+                <li><a href="./contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <!-- Sección Sala de Juegos -->
+    <section class="sala-juegos">
+        <h1>Bienvenidos a la Sala de Juegos</h1>
+        <p>En Casino JD encontrarás una gran variedad de juegos para desafiar tu suerte y vivir la emoción del azar.</p>
+
+        <h2>Juegos Disponibles</h2>
+        <div class="juegos-container">
+            <!-- Blackjack -->
+            <div class="juego">
+                <a href="./juegos/blackjack-v2-master/blackjack.html">
+                    <img src="../img/blackjack-fs.png" alt="Blackjack">
+                </a>
+                <h3>Blackjack</h3>
+                <p>Desafía al crupier en este clásico juego de cartas.</p>
+            </div>
+
+            <!-- Slots (Máquinas Tragaperras) -->
+            <div class="juego">
+                <a href="./juegos/HTML-slot-machine-example-main/index.html">
+                    <img src="../img/tragaperras.png" alt="Máquinas Tragaperras">
+                </a>
+                <h3>Máquinas Tragaperras</h3>
+                <p>Gira los rodillos y gana grandes premios.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pie de página -->
+    <footer class="footer">
+        <p>&copy;2025 Casino JD. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="../js/script.js"></script>
+</body>
+</html>

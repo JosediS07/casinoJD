@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Casino JD</title>
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="icon" href="./img/favicon.png" type="image/x-icon">
+</head>
+<body>
+    <audio id="background-music" loop autoplay>
+        <source src="./media/musica-de-fondo.mp3" type="audio/mp3">
+    </audio>
+
+    <!-- Cabecera con el logo -->
+    <header class="header">
+        <div class="logo">
+            <p>Casino jd</p>
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="./index.html">Inicio</a></li>
+                <li><a href="./src/localizacion.html">Localización</a></li>
+                <li class="dropdown">
+                    <a href="#" id="toggle-submenu">Servicios ▼</a>
+                    <ul class="submenu">
+                        <li><a href="./src/restaurante.html">Restaurante</a></li>
+                        <li><a href="./src/sala.html">Sala de Juegos</a></li>
+                        <li><a href="./src/cajero.html">Cajeros</a></li>
+                    </ul>
+                </li>
+                <li><a href="./pdf/legal.pdf" download="" title="Descargar bases legales del casino">Oferta</a></li>
+                <li><a href="./src/galeria.html">Galería</a></li>
+                <li><a href="./src/contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <!-- Sección Hero (Bienvenida) -->
+    <section class="hero">
+        <h1>Bienvenidos a la Sala de Juegos</h1>
+        <p>Vive la emoción del juego con nosotros</p>
+        <video src="./media/bienvenida.mp4"  controls muted autoplay loop></video>
+    </section>
+    
+    <!-- Información sobre la sala -->
+    <section class="about">
+        <h2>Sobre Nosotros</h2>
+        <p>En Casino JD, te ofrecemos una experiencia única e inolvidable. Nuestra misión es proporcionar un ambiente seguro y emocionante donde cada jugador pueda disfrutar de sus juegos favoritos. Nos especializamos en ofrecer una amplia gama de opciones, desde apuestas deportivas hasta juegos clásicos como la ruleta, las máquinas tragamonedas y el bingo.</p>
+
+        <p>Contamos con un equipo altamente capacitado que trabaja incansablemente para asegurarse de que cada visita a nuestra sala sea una experiencia excepcional. Ya sea que busques diversión o un reto, en Casino JD siempre tendrás una experiencia personalizada, segura y llena de emoción.</p>
+
+        <p>Estamos comprometidos con ofrecer un ambiente de alta calidad. Nuestro edificio cuenta con las instalaciones más modernas, ofreciendo comodidad y tecnología de vanguardia. Además, brindamos un servicio al cliente excepcional, garantizando que te sientas bien atendido en todo momento.</p>
+
+        <p>La diversidad y la seguridad son dos de nuestros pilares más importantes. Nos aseguramos de que todos nuestros juegos sean justos, transparentes y regulados para que puedas disfrutar de una experiencia de juego responsable.</p>
+    </section>
+    
+    <!-- Pie de página -->
+    <footer class="footer">
+        <p>&copy;2025 Casino JD. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="./js/script.js"></script>
+</body>
+</html>
