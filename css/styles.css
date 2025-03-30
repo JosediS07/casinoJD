@@ -1,0 +1,1160 @@
+/* Estilos generales */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to bottom, #121212, #1e1e1e);
+    color: white;
+}
+
+/* Cabecera */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background: linear-gradient(to right, #8b0000, #ff4500);
+    box-shadow: 0px 4px 15px rgba(255, 69, 0, 0.6);
+    border-radius: 10px;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: gold;
+    letter-spacing: 3px;
+}
+
+/* Menú de navegación */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+.nav-links li {
+    display: inline-block;
+    position: relative;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+.nav-links a:hover {
+    color: gold;
+    background-color: rgba(255, 215, 0, 0.1);
+}
+
+/* Sección Hero */
+.hero {
+    text-align: center;
+    padding: 120px 20px;
+    background: #222;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    border-bottom: 2px solid #ff4500;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    text-shadow: 5px 5px 15px rgba(255, 140, 0, 0.8);
+    color: gold;
+    letter-spacing: 2px;
+}
+
+.hero p {
+    font-size: 1.5rem;
+    background: linear-gradient(to right, rgba(255, 140, 0, 0.7), rgba(0, 0, 0, 0.8));
+    display: inline-block;
+    padding: 12px 25px;
+    border-radius: 8px;
+    color: white;
+    box-shadow: 0px 4px 12px rgba(255, 69, 0, 0.6);
+}
+
+.hero-img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 20px auto;
+}
+
+/* Sección Sobre Nosotros */
+.about {
+    padding: 50px 20px;
+    text-align: center;
+    background: linear-gradient(to right, #1e1e1e, #4b4b4b);
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.about h2 {
+    color: gold;
+    text-shadow: 2px 2px 5px rgba(255, 215, 0, 0.7);
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+}
+
+.about p {
+    color: #d3d3d3;
+    font-size: 1.2rem;
+    line-height: 1.8;
+    max-width: 850px;
+    margin: 0 auto;
+}
+
+/* Pie de página */
+.footer {
+    text-align: center;
+    padding: 20px;
+    background: linear-gradient(to right, #8b0000, #ff4500);
+    margin-top: 50px;
+    box-shadow: 0px -4px 15px rgba(255, 69, 0, 0.6);
+    color: white;
+    border-radius: 10px;
+}
+
+.footer p {
+    margin: 0;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+/* Submenú */
+.submenu {
+    list-style: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.9);
+    min-width: 180px;
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out, visibility 0s 0.3s;
+    z-index: 1;
+}
+
+.submenu li {
+    display: block;
+}
+
+.submenu a {
+    padding: 12px;
+    color: white;
+    display: block;
+    transition: background 0.3s ease-in-out;
+}
+
+.submenu a:hover {
+    background-color: rgba(255, 0, 0, 0.7);
+}
+
+/* Mostrar el submenú con clase activa */
+.submenu.active {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+/* Estilo del video */
+video {
+    display: block;
+    width: 80%;
+    max-width: 1000px;
+    height: auto;
+    margin: 40px auto;
+    border-radius: 20px;
+    box-shadow: 0px 6px 20px rgba(255, 215, 0, 0.8), 0px 0px 50px rgba(255, 69, 0, 0.6);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+video:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 10px 30px rgba(255, 215, 0, 1), 0px 0px 60px rgba(255, 69, 0, 0.8);
+}
+
+/* ----- MEDIA QUERIES PARA RESPONSIVIDAD ----- */
+
+/* Para pantallas de dispositivos pequeños (móviles) */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        text-align: center;
+        padding: 15px;
+    }
+
+    .logo {
+        font-size: 24px;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .hero {
+        padding: 80px 20px;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 1.2rem;
+    }
+
+    .about h2 {
+        font-size: 1.8rem;
+    }
+
+    .about p {
+        font-size: 1rem;
+    }
+
+    .footer {
+        padding: 15px;
+    }
+
+    video {
+        width: 100%;
+        margin: 20px 0;
+    }
+
+    .submenu {
+        min-width: 150px;
+    }
+}
+
+/* Para pantallas muy pequeñas (móviles en orientación vertical) */
+@media (max-width: 480px) {
+    .header {
+        padding: 10px;
+    }
+
+    .logo {
+        font-size: 20px;
+    }
+
+    .nav-links {
+        gap: 10px;
+    }
+
+    .hero h1 {
+        font-size: 1.8rem;
+    }
+
+    .hero p {
+        font-size: 1.1rem;
+    }
+
+    .about h2 {
+        font-size: 1.5rem;
+    }
+
+    .about p {
+        font-size: 0.9rem;
+    }
+
+    video {
+        width: 100%;
+        margin: 15px auto;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+/* Estilos generales para la sección de Localización */
+.localizacion {
+    padding: 60px 20px;
+    text-align: center;
+    background: #1a1a1a;
+    color: white;
+    box-shadow: 0 0 15px rgba(255, 215, 0, 0.4);
+    border-radius: 10px;
+    margin: 40px auto;
+    max-width: 90%;
+}
+
+/* Títulos */
+.localizacion h1 {
+    font-size: 3rem;
+    color: gold;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.localizacion h2 {
+    font-size: 2rem;
+    color: gold;
+    margin-top: 40px;
+    text-decoration: underline;
+}
+
+/* Párrafos */
+.localizacion p {
+    font-size: 1.3rem;
+    line-height: 1.8;
+    color: wheat;
+    margin: 15px 0;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Estilos para el contenedor del mapa */
+.mapa-container {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mapa-container iframe {
+    width: 90%;
+    max-width: 1000px;
+    height: 450px;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(255, 215, 0, 0.3);
+    transition: transform 0.3s ease-in-out;
+}
+
+.mapa-container iframe:hover {
+    transform: scale(1.02);
+}
+
+/* ----- MEDIA QUERIES PARA RESPONSIVIDAD ----- */
+
+/* Para pantallas de dispositivos pequeños (móviles) */
+@media (max-width: 768px) {
+    .localizacion {
+        padding: 40px 15px;
+        max-width: 95%;
+        margin-top: 20px;
+    }
+
+    .localizacion h1 {
+        font-size: 2.5rem;
+    }
+
+    .localizacion h2 {
+        font-size: 1.8rem;
+    }
+
+    .localizacion p {
+        font-size: 1.1rem;
+        margin: 10px 0;
+    }
+
+    .mapa-container iframe {
+        width: 100%;
+        height: 300px;
+    }
+}
+
+/* Para pantallas muy pequeñas (móviles en orientación vertical) */
+@media (max-width: 480px) {
+    .localizacion {
+        padding: 30px 10px;
+        max-width: 100%;
+        margin-top: 10px;
+    }
+
+    .localizacion h1 {
+        font-size: 2rem;
+    }
+
+    .localizacion h2 {
+        font-size: 1.6rem;
+    }
+
+    .localizacion p {
+        font-size: 1rem;
+        margin: 8px 0;
+    }
+
+    .mapa-container iframe {
+        width: 100%;
+        height: 250px;
+    }
+}
+
+
+
+
+
+/* Estilos para la página de Restaurante */
+.restaurante {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: #f8f8f8;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Título principal */
+.restaurante h1 {
+    font-size: 3rem;
+    color: #ff5f6d;
+    margin-bottom: 30px;
+    text-shadow: 2px 2px 8px rgba(255, 140, 0, 0.6);
+}
+
+/* Descripción del restaurante */
+.restaurante p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #333;
+    margin-bottom: 50px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 20px;
+}
+
+/* Estilos del menú */
+.menu {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    padding: 0 20px;
+    justify-items: center;
+}
+
+/* Item del menú */
+.menu-item {
+    background: white;
+    border-radius: 15px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease-in-out;
+}
+
+.menu-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+/* Imagen del menú */
+.menu-item img {
+    width: 100%;
+    border-radius: 15px;
+    max-height: 250px;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+/* Título de cada sección del menú */
+.menu-item h3 {
+    font-size: 1.8rem;
+    color: #d32f2f;
+    margin: 15px 0;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+/* Descripción de cada item del menú */
+.menu-item p {
+    font-size: 1.1rem;
+    color: #555;
+    line-height: 1.5;
+}
+
+/* Pie de página */
+.footer {
+    text-align: center;
+    padding: 25px;
+    background: linear-gradient(to right, #8b0000, #ff4500);
+    margin-top: 50px;
+    box-shadow: 0px -4px 15px rgba(255, 69, 0, 0.5);
+    color: white;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.footer p {
+    margin: 0;
+}
+
+/* ----- MEDIA QUERIES PARA RESPONSIVIDAD ----- */
+
+/* Para pantallas de dispositivos pequeños (móviles) */
+@media (max-width: 768px) {
+    .restaurante h1 {
+        font-size: 2.5rem;
+    }
+
+    .restaurante p {
+        font-size: 1.1rem;
+        padding: 0 15px;
+    }
+
+    .menu {
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); /* Ajusta el tamaño de las columnas */
+        gap: 20px;
+    }
+
+    .menu-item {
+        padding: 15px;
+    }
+
+    .menu-item img {
+        max-height: 200px; /* Reduce el tamaño de las imágenes */
+    }
+
+    .menu-item h3 {
+        font-size: 1.5rem;
+    }
+
+    .menu-item p {
+        font-size: 1rem;
+    }
+
+    .footer {
+        padding: 20px;
+    }
+}
+
+/* Para pantallas más pequeñas (móviles en orientación vertical) */
+@media (max-width: 480px) {
+    .restaurante {
+        padding: 30px 10px;
+    }
+
+    .restaurante h1 {
+        font-size: 2rem;
+    }
+
+    .restaurante p {
+        font-size: 1rem;
+    }
+
+    .menu {
+        grid-template-columns: 1fr; /* Coloca los elementos del menú en una sola columna */
+        gap: 15px;
+    }
+
+    .menu-item {
+        padding: 10px;
+    }
+
+    .menu-item img {
+        max-height: 180px; /* Reduce aún más el tamaño de las imágenes */
+    }
+
+    .menu-item h3 {
+        font-size: 1.3rem;
+    }
+
+    .menu-item p {
+        font-size: 0.9rem;
+    }
+
+    .footer {
+        padding: 15px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+/* ----- Estilos para la sección de Sala de Juegos ----- */
+.sala-juegos {
+    text-align: center;
+    padding: 50px 20px;
+    background: linear-gradient(to bottom, #1e1e1e, #333);
+    color: white;
+}
+
+.sala-juegos h1 {
+    font-size: 3rem;
+    margin-bottom: 15px;
+    color: #ffd700;
+    text-shadow: 2px 2px 10px rgba(255, 140, 0, 0.6);
+}
+
+.sala-juegos p {
+    font-size: 1.2rem;
+    color: #e0e0e0;
+    margin-bottom: 40px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Contenedor de juegos */
+.juegos-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    padding: 20px;
+    margin-top: 30px;
+}
+
+/* Estilos de cada juego */
+.juego {
+    background-color: #222;
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+    width: 300px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+}
+
+.juego:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 10px 20px rgba(255, 215, 0, 0.7);
+}
+
+.juego img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.juego img:hover {
+    transform: scale(1.1);
+}
+
+.juego h3 {
+    font-size: 1.6rem;
+    margin: 15px 0;
+    color: #ffd700;
+    text-transform: uppercase;
+}
+
+.juego p {
+    font-size: 1.1rem;
+    color: #ccc;
+    margin-bottom: 15px;
+}
+
+/* Pie de página */
+.footer {
+    text-align: center;
+    padding: 20px;
+    background: linear-gradient(to right, #8b0000, #ff4500);
+    box-shadow: 0px -4px 10px rgba(255, 69, 0, 0.5);
+    color: white;
+    font-weight: bold;
+}
+
+.footer p {
+    margin: 0;
+}
+
+/* ----- MEDIA QUERIES PARA RESPONSIVIDAD ----- */
+
+/* Para pantallas de dispositivos pequeños (móviles) */
+@media (max-width: 768px) {
+    .sala-juegos h1 {
+        font-size: 2.5rem;
+    }
+
+    .sala-juegos p {
+        font-size: 1.1rem;
+        padding: 0 15px;
+    }
+
+    .juegos-container {
+        gap: 20px;
+    }
+
+    .juego {
+        width: 250px; /* Reduce el tamaño de los juegos */
+        padding: 15px;
+    }
+
+    .juego img {
+        height: 180px; /* Ajusta el tamaño de las imágenes */
+    }
+
+    .juego h3 {
+        font-size: 1.4rem;
+    }
+
+    .juego p {
+        font-size: 1rem;
+    }
+
+    .footer {
+        padding: 15px;
+    }
+}
+
+/* Para pantallas muy pequeñas (móviles en orientación vertical) */
+@media (max-width: 480px) {
+    .sala-juegos {
+        padding: 30px 10px;
+    }
+
+    .sala-juegos h1 {
+        font-size: 2rem;
+    }
+
+    .sala-juegos p {
+        font-size: 1rem;
+    }
+
+    .juegos-container {
+        gap: 15px;
+        flex-direction: column; /* Coloca los juegos en una columna en pantallas muy pequeñas */
+    }
+
+    .juego {
+        width: 100%; /* Los juegos ocupan el 100% de la pantalla */
+        padding: 10px;
+    }
+
+    .juego img {
+        height: 150px; /* Ajusta el tamaño de las imágenes */
+    }
+
+    .juego h3 {
+        font-size: 1.3rem;
+    }
+
+    .juego p {
+        font-size: 0.9rem;
+    }
+
+    .footer {
+        padding: 10px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+/* ----- Estilos para la sección de Cajeros ----- */
+.cajeros {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #222;
+    color: #fff;
+}
+
+.cajeros h1 {
+    font-size: 3rem;
+    color: #ff5f6d;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 10px rgba(255, 95, 109, 0.5);
+}
+
+.cajeros p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #e0e0e0;
+    margin-bottom: 30px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Listas de Medios de Pago y Seguridad */
+.medios-pago, .seguridad {
+    list-style: none;
+    padding: 0;
+    margin-top: 30px;
+}
+
+.medios-pago li, .seguridad li {
+    font-size: 1.2rem;
+    background: #333;
+    padding: 12px;
+    margin: 10px auto;
+    border-radius: 8px;
+    width: 60%;
+    color: #fff;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+/* Imagen del Cajero */
+.cajero-img {
+    margin-top: 30px;
+}
+
+.cajero-img img {
+    width: 80%;
+    max-width: 500px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(255, 95, 109, 0.5);
+    transition: transform 0.3s ease;
+}
+
+.cajero-img img:hover {
+    transform: scale(1.05);
+}
+
+/* Pie de página */
+.footer {
+    text-align: center;
+    padding: 20px;
+    background: linear-gradient(to right, #8b0000, #ff4500);
+    box-shadow: 0px -4px 10px rgba(255, 69, 0, 0.5);
+    color: white;
+    font-weight: bold;
+}
+
+.footer p {
+    margin: 0;
+}
+
+/* ----- MEDIA QUERIES PARA RESPONSIVIDAD ----- */
+
+/* Para pantallas de dispositivos pequeños (móviles) */
+@media (max-width: 768px) {
+    .cajeros h1 {
+        font-size: 2.5rem;
+    }
+
+    .cajeros p {
+        font-size: 1.1rem;
+        padding: 0 15px;
+    }
+
+    .medios-pago li, .seguridad li {
+        width: 80%; /* Aumenta el ancho de los ítems en pantallas más pequeñas */
+        font-size: 1.1rem;
+    }
+
+    .cajero-img img {
+        width: 90%; /* Ajusta el tamaño de la imagen */
+        max-width: 450px; /* Limita el tamaño máximo de la imagen */
+    }
+
+    .footer {
+        padding: 15px;
+    }
+}
+
+/* Para pantallas muy pequeñas (móviles en orientación vertical) */
+@media (max-width: 480px) {
+    .cajeros {
+        padding: 30px 10px;
+    }
+
+    .cajeros h1 {
+        font-size: 2rem;
+    }
+
+    .cajeros p {
+        font-size: 1rem;
+    }
+
+    .medios-pago li, .seguridad li {
+        width: 90%; /* Los ítems ocupan más espacio */
+        font-size: 1rem;
+    }
+
+    .cajero-img img {
+        width: 100%; /* La imagen ocupa el 100% del ancho disponible */
+        max-width: 400px; /* Limita el tamaño máximo */
+    }
+
+    .footer {
+        padding: 10px;
+    }
+}
+
+
+
+
+
+
+
+
+
+/* ----- Estilos para la sección de Galería ----- */
+.galeria {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #222;
+    color: #fff;
+}
+
+.galeria h1 {
+    font-size: 2.5rem;
+    color: #ff5f6d;
+    margin-bottom: 20px;
+}
+
+.galeria p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Grid de Imágenes - 4 columnas en pantallas grandes, 2 en medianas y 1 en pantallas pequeñas */
+.grid-galeria {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 columnas en pantallas grandes */
+    gap: 15px;
+    padding: 20px;
+}
+
+.grid-galeria img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(255, 95, 109, 0.5);
+    transition: transform 0.3s ease-in-out;
+}
+
+.grid-galeria img:hover {
+    transform: scale(1.05);
+}
+
+/* Responsividad */
+@media (max-width: 1024px) {
+    .grid-galeria {
+        grid-template-columns: repeat(2, 1fr); /* 2 columnas en pantallas medianas */
+    }
+}
+
+@media (max-width: 600px) {
+    .grid-galeria {
+        grid-template-columns: 1fr; /* 1 columna en pantallas pequeñas */
+    }
+    
+    .galeria h1 {
+        font-size: 2rem; /* Ajusta el tamaño del título en pantallas más pequeñas */
+    }
+
+    .galeria p {
+        font-size: 1rem; /* Ajusta el tamaño de la descripción en pantallas más pequeñas */
+        padding: 0 15px; /* Añade algo de espacio lateral */
+    }
+}
+
+
+
+
+
+
+/* ----- Estilos generales para la página de contacto ----- */
+
+.contacto {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #222;
+    color: #fff;
+}
+
+.contacto h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    color: #ffd700;
+}
+
+.contacto p {
+    font-size: 1.2em;
+    color: #fff;
+    margin-bottom: 30px;
+}
+
+/* Formulario de contacto */
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #333;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.contact-form label {
+    display: block;
+    font-size: 1.1em;
+    margin-bottom: 5px;
+    color: #ffd700;
+}
+
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 1px solid #444;
+    background-color: #444;
+    color: #fff;
+    font-size: 1em;
+}
+
+.contact-form textarea {
+    height: 150px;
+    resize: none;
+}
+
+.contact-form .submit-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #ffd700;
+    border: none;
+    color: #222;
+    font-size: 1.2em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.contact-form .submit-btn:hover {
+    background-color: #ffcc00;
+}
+
+/* ----- Estilos para los enlaces de redes sociales ----- */
+
+.redes-sociales {
+    text-align: center;
+    padding: 30px 20px;
+    background-color: #222;
+    color: #fff;
+}
+
+.redes-sociales h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #ffd700;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.social-link img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 50%;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.social-link img:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 4px 10px rgba(255, 215, 0, 0.7);
+}
+
+/* ----- Estilos del pie de página ----- */
+.footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #222;
+    color: #fff;
+}
+
+/* ----- Responsividad para el formulario ----- */
+@media (max-width: 1024px) {
+    .contacto h1 {
+        font-size: 2.2em;
+    }
+
+    .contact-form {
+        padding: 25px;
+        max-width: 90%; /* Aumenta el tamaño del formulario en pantallas medianas */
+    }
+
+    .contact-form input, .contact-form textarea {
+        font-size: 1em; /* Ajuste de tamaño de fuente para pantallas medianas */
+    }
+}
+
+@media (max-width: 768px) {
+    .contacto h1 {
+        font-size: 2em;
+    }
+
+    .contacto p {
+        font-size: 1rem; /* Ajuste de tamaño de la fuente en párrafos */
+    }
+
+    .contact-form {
+        padding: 15px;
+        max-width: 90%; /* Ajuste de ancho del formulario */
+    }
+
+    .contact-form input, .contact-form textarea {
+        font-size: 1em; /* Tamaño de fuente más pequeño en dispositivos más pequeños */
+    }
+
+    .social-links {
+        flex-direction: column; /* Organiza los enlaces de redes sociales verticalmente */
+        gap: 15px;
+    }
+
+    .social-link img {
+        width: 40px;
+        height: 40px; /* Reducción del tamaño de las imágenes de redes sociales */
+    }
+}
+
+/* ----- Responsividad para teléfonos móviles ----- */
+@media (max-width: 480px) {
+    .contacto h1 {
+        font-size: 1.8em;
+    }
+
+    .contacto p {
+        font-size: 0.9em; /* Ajusta el tamaño del texto para pantallas más pequeñas */
+    }
+
+    .contact-form {
+        padding: 10px;
+        max-width: 90%;
+    }
+
+    .contact-form input, .contact-form textarea {
+        font-size: 0.9em; /* Ajuste de fuente para mejorar la legibilidad en dispositivos más pequeños */
+    }
+
+    .social-link img {
+        width: 35px;
+        height: 35px; /* Más reducción de tamaño de los íconos en pantallas de móviles */
+    }
+}
+
+
+
+
+
