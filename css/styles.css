@@ -182,6 +182,96 @@ video:hover {
     box-shadow: 0px 10px 30px rgba(255, 215, 0, 1), 0px 0px 60px rgba(255, 69, 0, 0.8);
 }
 
+/* ----- MEDIA QUERIES PARA RESPONSIVIDAD ----- */
+
+/* Para pantallas de dispositivos pequeños (móviles) */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        text-align: center;
+        padding: 15px;
+    }
+
+    .logo {
+        font-size: 24px;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .hero {
+        padding: 80px 20px;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 1.2rem;
+    }
+
+    .about h2 {
+        font-size: 1.8rem;
+    }
+
+    .about p {
+        font-size: 1rem;
+    }
+
+    .footer {
+        padding: 15px;
+    }
+
+    video {
+        width: 100%;
+        margin: 20px 0;
+    }
+
+    .submenu {
+        min-width: 150px;
+    }
+}
+
+/* Para pantallas muy pequeñas (móviles en orientación vertical) */
+@media (max-width: 480px) {
+    .header {
+        padding: 10px;
+    }
+
+    .logo {
+        font-size: 20px;
+    }
+
+    .nav-links {
+        gap: 10px;
+    }
+
+    .hero h1 {
+        font-size: 1.8rem;
+    }
+
+    .hero p {
+        font-size: 1.1rem;
+    }
+
+    .about h2 {
+        font-size: 1.5rem;
+    }
+
+    .about p {
+        font-size: 0.9rem;
+    }
+
+    video {
+        width: 100%;
+        margin: 15px auto;
+    }
+}
+
+
 
 
 
@@ -249,6 +339,62 @@ video:hover {
 
 .mapa-container iframe:hover {
     transform: scale(1.02);
+}
+
+/* ----- MEDIA QUERIES PARA RESPONSIVIDAD ----- */
+
+/* Para pantallas de dispositivos pequeños (móviles) */
+@media (max-width: 768px) {
+    .localizacion {
+        padding: 40px 15px;
+        max-width: 95%;
+        margin-top: 20px;
+    }
+
+    .localizacion h1 {
+        font-size: 2.5rem;
+    }
+
+    .localizacion h2 {
+        font-size: 1.8rem;
+    }
+
+    .localizacion p {
+        font-size: 1.1rem;
+        margin: 10px 0;
+    }
+
+    .mapa-container iframe {
+        width: 100%;
+        height: 300px;
+    }
+}
+
+/* Para pantallas muy pequeñas (móviles en orientación vertical) */
+@media (max-width: 480px) {
+    .localizacion {
+        padding: 30px 10px;
+        max-width: 100%;
+        margin-top: 10px;
+    }
+
+    .localizacion h1 {
+        font-size: 2rem;
+    }
+
+    .localizacion h2 {
+        font-size: 1.6rem;
+    }
+
+    .localizacion p {
+        font-size: 1rem;
+        margin: 8px 0;
+    }
+
+    .mapa-container iframe {
+        width: 100%;
+        height: 250px;
+    }
 }
 
 
@@ -348,6 +494,92 @@ video:hover {
     margin: 0;
 }
 
+/* ----- MEDIA QUERIES PARA RESPONSIVIDAD ----- */
+
+/* Para pantallas de dispositivos pequeños (móviles) */
+@media (max-width: 768px) {
+    .restaurante h1 {
+        font-size: 2.5rem;
+    }
+
+    .restaurante p {
+        font-size: 1.1rem;
+        padding: 0 15px;
+    }
+
+    .menu {
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); /* Ajusta el tamaño de las columnas */
+        gap: 20px;
+    }
+
+    .menu-item {
+        padding: 15px;
+    }
+
+    .menu-item img {
+        max-height: 200px; /* Reduce el tamaño de las imágenes */
+    }
+
+    .menu-item h3 {
+        font-size: 1.5rem;
+    }
+
+    .menu-item p {
+        font-size: 1rem;
+    }
+
+    .footer {
+        padding: 20px;
+    }
+}
+
+/* Para pantallas más pequeñas (móviles en orientación vertical) */
+@media (max-width: 480px) {
+    .restaurante {
+        padding: 30px 10px;
+    }
+
+    .restaurante h1 {
+        font-size: 2rem;
+    }
+
+    .restaurante p {
+        font-size: 1rem;
+    }
+
+    .menu {
+        grid-template-columns: 1fr; /* Coloca los elementos del menú en una sola columna */
+        gap: 15px;
+    }
+
+    .menu-item {
+        padding: 10px;
+    }
+
+    .menu-item img {
+        max-height: 180px; /* Reduce aún más el tamaño de las imágenes */
+    }
+
+    .menu-item h3 {
+        font-size: 1.3rem;
+    }
+
+    .menu-item p {
+        font-size: 0.9rem;
+    }
+
+    .footer {
+        padding: 15px;
+    }
+}
+
+
+
+
+
+
+
+
 
 
 
@@ -441,6 +673,87 @@ video:hover {
     margin: 0;
 }
 
+/* ----- MEDIA QUERIES PARA RESPONSIVIDAD ----- */
+
+/* Para pantallas de dispositivos pequeños (móviles) */
+@media (max-width: 768px) {
+    .sala-juegos h1 {
+        font-size: 2.5rem;
+    }
+
+    .sala-juegos p {
+        font-size: 1.1rem;
+        padding: 0 15px;
+    }
+
+    .juegos-container {
+        gap: 20px;
+    }
+
+    .juego {
+        width: 250px; /* Reduce el tamaño de los juegos */
+        padding: 15px;
+    }
+
+    .juego img {
+        height: 180px; /* Ajusta el tamaño de las imágenes */
+    }
+
+    .juego h3 {
+        font-size: 1.4rem;
+    }
+
+    .juego p {
+        font-size: 1rem;
+    }
+
+    .footer {
+        padding: 15px;
+    }
+}
+
+/* Para pantallas muy pequeñas (móviles en orientación vertical) */
+@media (max-width: 480px) {
+    .sala-juegos {
+        padding: 30px 10px;
+    }
+
+    .sala-juegos h1 {
+        font-size: 2rem;
+    }
+
+    .sala-juegos p {
+        font-size: 1rem;
+    }
+
+    .juegos-container {
+        gap: 15px;
+        flex-direction: column; /* Coloca los juegos en una columna en pantallas muy pequeñas */
+    }
+
+    .juego {
+        width: 100%; /* Los juegos ocupan el 100% de la pantalla */
+        padding: 10px;
+    }
+
+    .juego img {
+        height: 150px; /* Ajusta el tamaño de las imágenes */
+    }
+
+    .juego h3 {
+        font-size: 1.3rem;
+    }
+
+    .juego p {
+        font-size: 0.9rem;
+    }
+
+    .footer {
+        padding: 10px;
+    }
+}
+
+
 
 
 
@@ -524,6 +837,67 @@ video:hover {
     margin: 0;
 }
 
+/* ----- MEDIA QUERIES PARA RESPONSIVIDAD ----- */
+
+/* Para pantallas de dispositivos pequeños (móviles) */
+@media (max-width: 768px) {
+    .cajeros h1 {
+        font-size: 2.5rem;
+    }
+
+    .cajeros p {
+        font-size: 1.1rem;
+        padding: 0 15px;
+    }
+
+    .medios-pago li, .seguridad li {
+        width: 80%; /* Aumenta el ancho de los ítems en pantallas más pequeñas */
+        font-size: 1.1rem;
+    }
+
+    .cajero-img img {
+        width: 90%; /* Ajusta el tamaño de la imagen */
+        max-width: 450px; /* Limita el tamaño máximo de la imagen */
+    }
+
+    .footer {
+        padding: 15px;
+    }
+}
+
+/* Para pantallas muy pequeñas (móviles en orientación vertical) */
+@media (max-width: 480px) {
+    .cajeros {
+        padding: 30px 10px;
+    }
+
+    .cajeros h1 {
+        font-size: 2rem;
+    }
+
+    .cajeros p {
+        font-size: 1rem;
+    }
+
+    .medios-pago li, .seguridad li {
+        width: 90%; /* Los ítems ocupan más espacio */
+        font-size: 1rem;
+    }
+
+    .cajero-img img {
+        width: 100%; /* La imagen ocupa el 100% del ancho disponible */
+        max-width: 400px; /* Limita el tamaño máximo */
+    }
+
+    .footer {
+        padding: 10px;
+    }
+}
+
+
+
+
+
 
 
 
@@ -581,6 +955,15 @@ video:hover {
 @media (max-width: 600px) {
     .grid-galeria {
         grid-template-columns: 1fr; /* 1 columna en pantallas pequeñas */
+    }
+    
+    .galeria h1 {
+        font-size: 2rem; /* Ajusta el tamaño del título en pantallas más pequeñas */
+    }
+
+    .galeria p {
+        font-size: 1rem; /* Ajusta el tamaño de la descripción en pantallas más pequeñas */
+        padding: 0 15px; /* Añade algo de espacio lateral */
     }
 }
 
@@ -702,15 +1085,75 @@ video:hover {
 }
 
 /* ----- Responsividad para el formulario ----- */
+@media (max-width: 1024px) {
+    .contacto h1 {
+        font-size: 2.2em;
+    }
+
+    .contact-form {
+        padding: 25px;
+        max-width: 90%; /* Aumenta el tamaño del formulario en pantallas medianas */
+    }
+
+    .contact-form input, .contact-form textarea {
+        font-size: 1em; /* Ajuste de tamaño de fuente para pantallas medianas */
+    }
+}
+
 @media (max-width: 768px) {
     .contacto h1 {
         font-size: 2em;
     }
 
+    .contacto p {
+        font-size: 1rem; /* Ajuste de tamaño de la fuente en párrafos */
+    }
+
     .contact-form {
-        padding: 20px;
+        padding: 15px;
+        max-width: 90%; /* Ajuste de ancho del formulario */
+    }
+
+    .contact-form input, .contact-form textarea {
+        font-size: 1em; /* Tamaño de fuente más pequeño en dispositivos más pequeños */
+    }
+
+    .social-links {
+        flex-direction: column; /* Organiza los enlaces de redes sociales verticalmente */
+        gap: 15px;
+    }
+
+    .social-link img {
+        width: 40px;
+        height: 40px; /* Reducción del tamaño de las imágenes de redes sociales */
     }
 }
+
+/* ----- Responsividad para teléfonos móviles ----- */
+@media (max-width: 480px) {
+    .contacto h1 {
+        font-size: 1.8em;
+    }
+
+    .contacto p {
+        font-size: 0.9em; /* Ajusta el tamaño del texto para pantallas más pequeñas */
+    }
+
+    .contact-form {
+        padding: 10px;
+        max-width: 90%;
+    }
+
+    .contact-form input, .contact-form textarea {
+        font-size: 0.9em; /* Ajuste de fuente para mejorar la legibilidad en dispositivos más pequeños */
+    }
+
+    .social-link img {
+        width: 35px;
+        height: 35px; /* Más reducción de tamaño de los íconos en pantallas de móviles */
+    }
+}
+
 
 
 
